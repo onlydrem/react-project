@@ -1,7 +1,7 @@
-require('styles/Container.css');
-
 import React from 'react';
 import $ from 'jquery';
+
+require('styles/Container.css');
 
 export default class Job extends React.Component {
     constructor(props) {

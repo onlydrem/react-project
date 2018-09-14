@@ -1,9 +1,10 @@
-require('styles/Reset.css');
-require('styles/Footer.css');
-
 import React from 'react';
 import Daily from '../container/Daily/Daily'
 import Job from '../container/Job/jobWanted'
+import Rend from '../container/Rend/Rend'
+
+require('styles/Reset.css');
+require('styles/Footer.css');
 
 
 export default class NewFootNav extends React.Component {
@@ -40,7 +41,6 @@ export default class NewFootNav extends React.Component {
                 var tabStyle=res.id==this.state.currentIndex?'subCtrl active':'subCrol'
                 
                 return <li key={index} onclick={this.tabCoiced.bind(_this,res,id)} className={tabStyle}>{res.tabName}</li>
-            
             }).bind(_this);
         return (
             <div className="FootNav">
@@ -51,7 +51,7 @@ export default class NewFootNav extends React.Component {
                     <li><Job /></li>
                     <li><Daily /></li>
                     <li>首页</li>
-                    <li>租房</li>
+                    <li><Rend /></li>
                     <li>二手</li>
                     <li>社交</li>
                 </ul>

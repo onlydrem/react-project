@@ -1,8 +1,8 @@
-require('normalize.css/normalize.css');
-require('styles/App.css');
-
 import React from 'react';
 
+
+require('normalize.css/normalize.css');
+require('styles/App.css');
 let yeomanImage = require('../images/yeoman.png');
 
 class AppComponent extends React.Component {

@@ -1,14 +1,16 @@
-// require('normalize.css/normalize.css');
-require('styles/HeaderDtail.css');
-require('styles/reset.css');
-// require('styles/add.css');
-//引入图片路径
-// import Bg from '../../images/img/left.png';
 import React from 'react';
 import Dropzone from 'react-dropzone';
 import request from 'superagent';
 import {Link} from "react-router-dom";
 import PropTypes from "prop-types";
+
+require('styles/HeaderDtail.css');
+require('styles/reset.css');
+
+// require('normalize.css/normalize.css');
+// require('styles/add.css');
+//引入图片路径
+// import Bg from '../../images/img/left.png';
 
 
 

@@ -1,6 +1,7 @@
-require('styles/Daily.css')
 import React from 'react';
 import $ from 'jquery';
+
+require('styles/Daily.css')
 
 export default class Daily extends React.Component {
 

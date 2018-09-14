@@ -1,8 +1,9 @@
+import React from 'react';
+import { Link } from 'react-router-dom'
+
 require('styles/Reset.css');
 require('styles/Header.css');
 
-import React from 'react';
-import { Link } from 'react-router-dom'
 
 
 export default class HeadNav extends React.Component {
