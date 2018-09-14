@@ -1,0 +1,68 @@
+.JobPage {
+  background: yello;
+  color: black;
+  font-family: '微软雅黑';
+  font-size: 12px;
+  padding: 3% 2%;
+  margin-bottom: 50px;
+}
+
+.list {
+  border: .5px solid black;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: " ";
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+
+/* .list-bottom:last-child{
+    padding-bottom: 50px;
+} */
+
+.list-top,
+.list-middle,
+.list-center,
+.list-bottom {
+  padding: 4% 3%;
+}
+
+.JobId {
+  float: left;
+  width: 80%;
+  word-break: keep-all;
+  /* 不换行 */
+  white-space: nowrap;
+  /* 不换行 */
+  overflow: hidden;
+  /* 内容超出宽度时隐藏超出部分的内容 */
+  text-overflow: ellipsis;
+  /*溢出时显示省略标记...；需与overflow:hidden;一起使用*/
+}
+
+.Times {
+  float: right;
+}
+
+.Company {
+  float: left;
+}
+
+.Salary {
+  float: right;
+}
+
+.list-center span:not(:first-child) {
+  margin-left: 5px;
+}
+

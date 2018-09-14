@@ -1,0 +1,68 @@
+.DailyBox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  font-size: 12px;
+  /* padding: 8px 3px; */
+}
+
+.DailyList {
+  width: 45%;
+  padding-left: 2px;
+  padding-top: 8px;
+}
+
+.tupian {
+  width: 100%;
+  height: 80%;
+}
+
+.tupian img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.DailyText {
+  color: #333333;
+}
+
+.DailyName {
+  margin-top: 10px;
+  text-align: center;
+  width: 80%;
+  word-break: keep-all;
+  /* 不换行 */
+  white-space: nowrap;
+  /* 不换行 */
+  overflow: hidden;
+  /* 内容超出宽度时隐藏超出部分的内容 */
+  text-overflow: ellipsis;
+  /*溢出时显示省略标记...；需与overflow:hidden;一起使用*/
+}
+
+.price {
+  float: left;
+  margin-top: 10px;
+}
+
+.newprice {
+  margin-left: 20px;
+  margin-top: 10px;
+  float: left;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: " ";
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}

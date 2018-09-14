@@ -1,0 +1,138 @@
+.accountBox {
+  width: 100%;
+  margin: 0 auto;
+  /* background:skyblue; */
+  margin: 0;
+  padding: 0;
+}
+
+.DtailTop {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  width: 100%;
+  margin: 0 auto;
+  height: 40px;
+  /* position:relative; */
+  background: #4dffff;
+  /* vertical-align: middle; */
+}
+
+.DtailTop-return {
+  width: 25px;
+  height: 25px;
+  background: url('../images/img/left.png') no-repeat;
+  background-size: 100% 100%;
+  float: left;
+}
+
+.accountBox li:not(.Login) {
+  position: relative;
+  padding: 8px 15px 0 0;
+  color: #000;
+  font-weight: 700;
+  height: 44px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.accountBox p {
+  line-height: 44px;
+}
+
+.accountBox .personImg {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 12px;
+  top: 10px;
+}
+
+.personImg img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.accountBox .con {
+  padding-left: 88px;
+  padding-right: 30px;
+  width: 100%;
+  height: 50px;
+}
+
+.DtailTop p {
+  color: #000;
+  margin: 0;
+  font-size: 16px;
+  line-height: 40px;
+  float: left;
+  margin: 0 auto;
+}
+
+/* .DtailTop p{
+    display: table;
+    content: " ";
+    clear: both;
+} */
+
+.Login {
+  box-sizing: border-box;
+  padding-top: 8px;
+  height: 160px;
+  width: 100%;
+  margin: 0 auto;
+  /* background: red; */
+  color: #000;
+  background: url('../images/img/bg1.jpg') no-repeat;
+  background-size: 100% 100%;
+  /* display: flex;
+    align-items: center; */
+  /* justify-content: center; */
+  text-align: center;
+}
+
+.uplodImg {
+  width: 100px;
+  height: 100px;
+  border-width: 0.5;
+  border-color: rgb(102, 102, 102);
+  border-style: solid;
+  border-radius: 50px;
+  margin: 0 auto;
+  display: block;
+  background: url('../images/img/tjtx.png') no-repeat;
+  background-size: 100% 100%;
+}
+
+/* .uplodImg img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+} */
+
+.Login p {
+  margin-top: 20px;
+}
+
+.denglu {
+  margin-top: 20px
+}
+
+.Login img {
+  margin: 0 auto;
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+}
+
+.avatar-uploader>.ant-upload {
+  width: 128px;
+  height: 128px;
+}
