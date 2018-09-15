@@ -1,8 +1,9 @@
 import React ,{Component}from 'react';
 import classnames from 'classnames';
-import {createEvent} from '../../actions/eventActions'
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types'
+
+import {createEvent} from '../../actions/eventActions'
 
 
 class EventForm extends Component {
@@ -27,26 +28,24 @@ class EventForm extends Component {
     render(){
         return(
             <form onSubmit={this.onSubmit}>
-            <h2>请登录</h2>
-            {errors.from || <div className="alert alert-danger">{errors.form}</div>}
-            <div className="form-group">
-            <label className="control-label">title：</label>
-            <input 
-                value={this.state.title} 
-                onChange={this.onChange} 
-                type='text' 
-                name='title' 
-                className={classnames('form-control',{'is-invalid':this.state.errors.title})}
-                />
-        </div>
-        <div className="form-group">
-        <button disabled={this.state.isLoding} className="btn btn-primary btn-lg">create</button>
-    </div>
-        </form>
-
-        ) 
+                <h2>请登录</h2>
+                    {this.state.errors.from || <div className="alert alert-danger">{this.state.errors.form}</div>}
+                <div className="form-group">
+                    <label className="control-label">title：</label>
+                    <input 
+                        value={this.state.title} 
+                        onChange={this.onChange} 
+                        type='text' 
+                        name='title' 
+                        className={classnames('form-control',{'is-invalid':this.state.errors.title})}
+                        />
+                </div>
+                <div className="form-group">
+                    <button disabled={this.state.isLoding} className="btn btn-primary btn-lg">create</button>
+                </div>
+            </form>
+        );
     }
-
 }
 
 export default connect(null,{createEvent})(EventForm)

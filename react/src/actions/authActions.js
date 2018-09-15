@@ -1,6 +1,7 @@
 import  axios from 'axios';  //这个组件会重复利用
-import setAuthorizationToken from '../components/utils/setAuthorizationToken'
 import jwtDecode from 'jwt-decode';
+
+import setAuthorizationToken from '../components/utils/setAuthorizationToken'
 import {SET_CURRENT_USER} from '../constans'
 
 export const setCurrentUser=(user)=>{

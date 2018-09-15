@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 
-require('styles/Reset.css');
+require('styles/public.css');
 require('styles/Header.css');
 
 

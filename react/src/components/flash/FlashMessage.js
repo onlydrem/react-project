@@ -1,7 +1,7 @@
-import React,{Component} from "react";
+import React,{Component} from 'react';
 // import {connect} from "react-redux";
-import PropTypes from "prop-types";
-import classnames from "classnames";
+import PropTypes from 'prop-types';
+import classnames from 'classnames';
 
 
 class FlashMessage extends Component{
@@ -16,9 +16,9 @@ class FlashMessage extends Component{
     render(){
         const {type,text}=this.props.message
         return(
-            <div className={classnames("alert",{
-                "alert-success":type==="success",
-                "alert-danger":type==="danger"
+            <div className={classnames('alert',{
+                'alert-success':type==='success',
+                'alert-danger':type==='danger'
             })}>
             {/*&times;    在这里是x号*/}
             <button onClick={this.onClick} className="close"><span>&times;</span></button>

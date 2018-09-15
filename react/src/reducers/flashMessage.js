@@ -1,7 +1,9 @@
 //存放flash信息
-import {ADD_FLASH_MESSAGE,DELETE_FLASH_MESSAGE} from "../constans";
-import shortid from "shortid";
-import findIndex from "lodash/findIndex"
+import {ADD_FLASH_MESSAGE,DELETE_FLASH_MESSAGE} from '../constans';
+import shortid from 'shortid';
+import findIndex from 'lodash/findIndex';
+
+
 const flashMessage=(state=[],action={})=>{
     switch(action.type){
         case ADD_FLASH_MESSAGE:

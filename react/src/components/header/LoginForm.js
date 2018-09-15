@@ -1,10 +1,11 @@
 import React ,{Component} from 'react';
-import classnames from "classnames";
-import {connect} from "react-redux";
-import PropTypes from "prop-types";
-import {login} from "../../actions/loginActions.js"
+import classnames from 'classnames';
+import {connect} from 'react-redux';
+import PropTypes from 'prop-types';
 
-import validateInput from "../utils/validations/login"
+
+import {login} from '../../actions/authActions.js'
+import validateInput from '../utils/validations/login'
 
 class LoginForm extends Component {
 

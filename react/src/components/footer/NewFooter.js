@@ -3,7 +3,7 @@ import Daily from '../container/Daily/Daily'
 import Job from '../container/Job/jobWanted'
 import Rend from '../container/Rend/Rend'
 
-require('styles/Reset.css');
+require('styles/public.css');
 require('styles/Footer.css');
 
 

@@ -1,13 +1,16 @@
 import React, {Component} from 'react';
 import {BrowserRouter, Route} from 'react-router-dom';
 
-// import Job from './container/Job/jobWanted'
 import App from './Main';
 import HeadDtail from './header/HeadDtail';
 import SigUp from './header/SigUp';
 import Login from './header/Login';
 import NewEvent from './header/NewEvent';
-import requiredAuth from './components/utils/requireAuth'
+import requiredAuth from './utils/requireAuth';
+
+
+
+
 
 export default class Routes extends Component {
     render() {
@@ -20,7 +23,7 @@ export default class Routes extends Component {
                     <Route path="/login" component={Login}/>
                     <Route path="/new-event" component={requiredAuth(NewEvent)}/>
                  </div> 
-            </BrowserRouter >
+            </BrowserRouter>
         )
     }
 

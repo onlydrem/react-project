@@ -1,8 +1,8 @@
 //高阶组件   也就是创建可以复用的组件
     import React ,{Component} from 'react';
     import {connect} from 'react-redux';
-    import PropTypes from 'prop-types'
-    import {addFlashMessage} from '../../actions/flashMessages'
+    import PropTypes from 'prop-types';
+    import {addFlashMessage} from '../../actions/flashMessages';
 
 
     export default function(ComposedComponent){  //这个参数即一个组件
@@ -16,10 +16,10 @@
                     this.context.router.history.push('/');
                 }
             }
-            static contextTypes={
+            AuthenticatecontextTypes={
                 router:PropTypes.object.isRequired
             }
-            static PropTypes={
+            AuthenticatePropTypes={
                 isAuthenticated:PropTypes.bool.isRequired,
                 addFlashMessage:PropTypes.func.isRequired
             }
@@ -34,7 +34,6 @@
                 );
             }
         }
-
 
         //判断是否登录
       const mapStateToProps = (state) => {

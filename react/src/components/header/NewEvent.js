@@ -1,5 +1,5 @@
 import React ,{Component}from 'react'
-import EventForm from 'EventForm'
+import EventForm from './EventForm'
 
 class CompoNewEvent extends Component{
     render(){

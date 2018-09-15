@@ -7,12 +7,13 @@ import {composeWithDevTools} from 'redux-devtools-extension';
 import {createStore,applyMiddleware} from 'redux'; //applyMiddleware是中间件
 import {Provider} from 'react-redux';
 import thunk from 'redux-thunk';
-import rootReducer from './reducers';
+
 // import App from './components/Main';
+import rootReducer from './reducers';
 import Routes from './components/routers';
 import FlashMessagesList from './components/flash/FlashMessagesList'
-import setAuthorizationToken from './components/utils/setAuthorizationToken'
-import setCurrentUser from './actions/authActions';
+import setAuthorizationToken from './components/utils/setAuthorizationToken';
+import {setCurrentUser} from './actions/authActions';
 import jwtDecode from 'jwt-decode'
 
 
@@ -31,9 +32,9 @@ if(localStorage.jwtToken){
 
 ReactDOM.render(
     <Provider store={store}>
-    <FlashMessagesList/>
-    <Routes/>
+        <Routes>
+            <FlashMessagesList/>
+        </Routes>
     </Provider>
-  
     // <App/>
 ,document.getElementById('app'))

@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-require('styles/Reset.css');
+require('styles/public.css');
 require('styles/Footer.css');
 export default class FootNav extends React.Component {
     render() {

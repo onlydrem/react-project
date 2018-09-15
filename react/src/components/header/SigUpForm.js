@@ -19,12 +19,12 @@ require('../../styles/login.css');
         }
     }
     static contextTypes={   //第三种路由方法  通过上下文来获取history
-        router:PropTypes.object
+        router:PropTypes.object.isRequired
     }
     static propTypes={   //验证传过来的变量（函数）
         userSignupRequest:PropTypes.func.isRequired,
-        addaddFlashMessage:PropTypes.func.isRequired,
-        isUserExist:this.propTypes.func.isRequired   //验证传递过来的方法
+        addFlashMessage:PropTypes.func.isRequired,
+        isUserExist:PropTypes.func.isRequired   //验证传递过来的方法
     }
     onChange = (e) =>{
         this.setState({[e.target.name]:e.target.value});
@@ -77,26 +77,47 @@ require('../../styles/login.css');
             <h2>欢迎注册</h2>
             <div className="form-group">
                 <label className="control-label">用户名：</label>
-                <input value={this.state.username} onChange={this.onChange} type="text" name="username" onBlur={this.checkUserExists} className={classnames('form-control',{'is-invalid':errors.username})}/>
+                <input 
+                    value={this.state.username} 
+                    onChange={this.onChange} type="text" 
+                    name="username" onBlur={this.checkUserExists} 
+                    className={classnames('form-control',{'is-invalid':errors.username})}
+                />
                 {errors.username && <span className="form-text text-muted">{errors.username}</span>}
             </div>
             <div className="form-group">
                 <label className="control-label">邮箱：</label>
-                <input value={this.state.email} onChange={this.onChange} type="email" name="email" onBlur={this.checkUserExists} className={classnames('form-control',{'is-invalid':errors.email})}/> 
+                <input 
+                    value={this.state.email} 
+                    onChange={this.onChange} 
+                    type="email" name="email" 
+                    onBlur={this.checkUserExists} 
+                    className={classnames('form-control',{'is-invalid':errors.email})}
+                /> 
                 {errors.email && <span className="form-text text-muted">{errors.email}</span>}
             </div>
             <div className="form-group">
                 <label className="control-label">密码：</label>
-                <input value={this.state.password} onChange={this.onChange} type="password" name="password" className={classnames('form-control',{'is-invalid':errors.password})}/>
+                <input 
+                    value={this.state.password}
+                    onChange={this.onChange} 
+                    type="password" name="password"
+                    className={classnames('form-control',{'is-invalid':errors.password})}
+                />
                 {errors.password && <span className="form-text text-muted">{errors.password}</span>}
             </div>
             <div className="form-group">
                 <label className="control-label">再次输入密码:</label>
-                <input value={this.state.passwordComfmation} onChange={this.onChange} type="password" name="passwordComfmation" className={classnames('form-control',{'is-invalid':errors.passwordComfmation})}/>
+                <input 
+                    value={this.state.passwordComfmation}
+                    onChange={this.onChange}
+                    type="password"
+                    name="passwordComfmation" className={classnames('form-control',{'is-invalid':errors.passwordComfmation})}
+                />
                 {errors.passwordComfmation && <span className="form-text text-muted">{errors.passwordComfmation}</span>}
             </div>
             <div className="form-group">
-                    <button disabled={this.state.isLoding || this.state.invalid} className="btn btn-primary btn-lg">登录</button>
+                <button disabled={this.state.isLoding || this.state.invalid} className="btn btn-primary btn-lg">登录</button>
             </div>
         </form>
             </div>
