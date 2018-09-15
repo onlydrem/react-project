@@ -1,8 +1,10 @@
 import React from 'react';
 import Dropzone from 'react-dropzone';
 import request from 'superagent';
-import {Link} from "react-router-dom";
-import PropTypes from "prop-types";
+import {Link} from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import {logout} from "../../actions/authActions"
 
 require('styles/HeaderDtail.css');
 require('styles/reset.css');
@@ -17,7 +19,7 @@ require('styles/reset.css');
 const CLOUDINARY_UPLOAD_PRESET = 'bmzjbxoq';
 const CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/react-cloudinary/upload';
 
-export default class HeadDtail extends React.Component {
+class HeadDtail extends React.Component {
   constructor(props) {
     super(props);
 
@@ -28,6 +30,10 @@ export default class HeadDtail extends React.Component {
   }
   static contextTypes={   //第三种路由方法  通过上下文来获取history
     router:PropTypes.object
+}
+static PropTypes={
+  auth:PropTypes.object.isRequired,
+  logout:PropTypes.func.isRequired
 }
 onClick=()=>{
   this.context.router.history.goBack(-1);
@@ -61,7 +67,31 @@ onClick=()=>{
     });
   }
 
+  logout=(e)=>{
+    e.preventDefault();
+    this.props.logout()
+  }
   render() {
+    const {isAuthenticated,user}=this.props.auth
+
+    const userLinks=(
+      <ul className="navbar-nav mr-auto">
+        <li className="nav-item">
+        <a className="nav-link" onClick={this.logout}>{user.username} Logout</a>
+        </li>
+      </ul>
+     
+    )
+    const guestLinks=(
+      <ul className="navbar-nav mr-auto">
+          <li className="nav-item">
+              <Link className="nav-link" to="/sigup">Sig Up</Link>
+          </li>
+          <li className="nav-item">
+          <Link className="nav-link" to="/sigup"> login</Link>
+          </li>
+      </ul>
+    )
     return (
       <div className="accountBox">
         <div className="DtailTop">
@@ -84,7 +114,7 @@ onClick=()=>{
 
           </div>
           <div className="denglu">
-              <Link to="/SigUp">点击登录</Link>
+              {isAuthenticated?userLinks:guestLinks}
           </div>
         </form>
         <ul>
@@ -112,6 +142,14 @@ onClick=()=>{
     );
   }
 }
+
+const  mapStateToProps = (state) => {
+  return {
+      auth:state.auth
+  }
+}
+
+export default connect(mapStateToProps,{logout})(HeadDtail) 
 
 
 

@@ -2,10 +2,10 @@
 
 // this.props属性
 
-require('react');
+import React,{Component} from 'react'
 import PropsChildren from './PropsChild.js'
 
- export default class Props extends React.Component{
+ export default class Props extends Component{
 
     getDefaultProps(){
         return{
@@ -18,7 +18,7 @@ import PropsChildren from './PropsChild.js'
     //   },
 
     handleClick(){
-        {this.props.data3("我是测试方法：")}
+        {this.props.data3('我是测试方法：')}
     }
     render(){
         return(
